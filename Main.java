@@ -12,7 +12,6 @@ import java.util.Objects;
 public class Main extends TelegramLongPollingBot {
 
     private static final String BOT_TOKEN = "6952504597:AAGuc_f4JWx3XuQS7EPrYz4Ie_u2Uk-fJ-k";
-    private static final long ADMIN_CHAT_ID = 1081950449;
 
     private static String NameInApp;
     private static String Code;
@@ -48,10 +47,6 @@ public class Main extends TelegramLongPollingBot {
             long chatId = update.getMessage().getChatId();
             verification(user.getUserName(), chatId);
         }
-    }
-    private void sendUsernameToAdmin(String username) {
-        String message = "Новый пользователь: @" + username;
-        sendTelegramMessage(ADMIN_CHAT_ID, message);
     }
 
     @Override
